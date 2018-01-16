@@ -1,6 +1,8 @@
 ResourceDemo
 ============
 
+[![Example Usage](https://j.gifs.com/86OJZg.gif)](https://www.youtube.com/watch?v=7qCbOpMzn44)
+
 a short demo of my resource managment lib [DarwinsBox/resourcehandling](https://github.com/Danny02/DarwinsBox/tree/master/ResourceHandling)
 
 Run the build jar or call `mvn exec:java` to see the example application.

@@ -5,7 +5,7 @@
 package de.darwin.resourcedemo;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
+import java.io.*;
 
 import darwin.annotations.ServiceProvider;
 import darwin.resourcehandling.factory.*;
@@ -31,7 +31,9 @@ public class ImageLoader extends ResourceFromHandleProvider<ImageWrapper> implem
     
     private BufferedImage createImage(ResourceHandle handle) throws IOException
     {
-        return ImageIO.read(handle.getStream());
+		    try(InputStream in = handle.getStream()) {
+        	return ImageIO.read(in);
+				}
     }
 
     @Override
